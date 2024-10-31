@@ -9,7 +9,7 @@
 - 4通道fft电路参考自git库：[https://github.com/u3oR/fft_verilog](https://github.com/u3oR/fft_verilog)
 - 8通道fft电路参考自菜鸟教程的文章<Verilog 教程 7.5 Verilog FFT 设计>：[https://www.runoob.com/w3cnote/verilog-fft.html](https://www.runoob.com/w3cnote/verilog-fft.html)
 
-本工程运行需要安装iverilog工具与gtkwave仿真工具（不看波形可不装）
+本工程运行需要安装iverilog工具与gtkwave波形查看工具（不看波形可不装）
 
 ------
 
