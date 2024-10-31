@@ -127,4 +127,4 @@ python fft_eval.py --fft_channels 4 --in_bitwidths 8 --out_bitwidths 10 --VCD_di
 - 多做测试，有bug再修吧
 - 8通道fft电路代码已完成重要勘误：
 
-​	![image-20241030204621259](D:\LLM-IC\FFT_rtl_eval\image\image-20241030204621259.png)
+​	![image-20241030204621259](.\image\image-20241030204621259.png)
