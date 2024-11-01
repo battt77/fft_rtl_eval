@@ -28,9 +28,9 @@
 
 ```powershell
 cd fft4
-#编译代码
+#编译代码，生成执行文件
 iverilog -o fft4_sim fft4_tb.v fft4.v butterfly.v	
-#生成执行文件
+#生成波形
 vvp ./fft4_sim
 #查看波形
 gtkwave ./fft4_tb.vcd
@@ -40,9 +40,9 @@ gtkwave ./fft4_tb.vcd
 
 ```powershell
 cd fft8
-#编译代码
+#编译代码，生成执行文件
 iverilog -o fft8_sim fft8_tb.sv fft8.v butterfly.v	
-#生成执行文件
+#生成波形文件
 vvp ./fft8_sim
 #查看波形
 gtkwave ./fft8.vcd
