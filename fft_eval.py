@@ -98,6 +98,13 @@ def fft_eval(fft_channels=8,in_bitwidths=24,out_bitwidths=24,VCD_dir=None):
 
     signals, timestamps = read_vcd(VCD_dir)
     
+    check_port_name = []
+    for signal_id, signal in signals.items():
+        check_port_name.append(signal['name'])
+
+    assert all(item in check_port_name for item in in_real_names) & all(item in check_port_name for item in in_image_names),"Make sure your input port name is x{$channel_index}_real or x{$channel_index}_imag!"
+    assert all(item in check_port_name for item in out_real_names) & all(item in check_port_name for item in out_image_names),"Make sure your output port name is y{$channel_index}_real or y{$channel_index}_imag!"
+        
     valid_time = 0
     in_num = np.empty((fft_channels))
     out_num = np.empty((fft_channels))

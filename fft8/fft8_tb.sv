@@ -135,7 +135,7 @@ module test ;
    
    initial begin
       $dumpfile("fft8.vcd");
-      $dumpvars(0,test);
+      $dumpvars;
    end
    
    //finish simulation
