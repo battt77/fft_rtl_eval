@@ -125,6 +125,7 @@ python fft_eval.py --fft_channels 4 --in_bitwidths 8 --out_bitwidths 10 --VCD_di
 
 - 正常MSE值小于**1**，RTL代码近似度高
 - 多做测试，有bug再修吧
+- 若运行不成功，请先查看RTL代码端口命名是否正确，输出波形是否正常（无x，z），再考虑是脚本的bug
 - 8通道fft电路代码已完成重要勘误：
 
 ​	![image-20241030204621259](./image/image-20241030204621259.png)
