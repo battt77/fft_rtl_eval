@@ -55,7 +55,7 @@ module fft4_tb;
         .out2_imag(y2_imag),
         .out3_real(y3_real),
         .out3_imag(y3_imag),
-        .yout_valid(valid)
+        .valid(valid)
     );
 
     // 模拟输入数据

@@ -104,7 +104,7 @@ def fft_eval(fft_channels=8,in_bitwidths=24,out_bitwidths=24,VCD_dir=None):
 
     assert all(item in check_port_name for item in in_real_names) & all(item in check_port_name for item in in_image_names),"Make sure your input port name is x{$channel_index}_real or x{$channel_index}_imag!"
     assert all(item in check_port_name for item in out_real_names) & all(item in check_port_name for item in out_image_names),"Make sure your output port name is y{$channel_index}_real or y{$channel_index}_imag!"
-    assert 'yout_valid' in check_port_name,"Make sure you have yout_valid signal!"  
+    assert 'valid' in check_port_name,"Make sure you have valid signal!"  
     valid_time = 0
     in_num = np.empty((fft_channels))
     out_num = np.empty((fft_channels))
@@ -112,7 +112,7 @@ def fft_eval(fft_channels=8,in_bitwidths=24,out_bitwidths=24,VCD_dir=None):
     #数据准备for
     for signal_id, signal in signals.items():
         #提取valid值为高的时刻
-        if signal['name'] == 'yout_valid':
+        if signal['name'] == 'valid':
             for change in signal['changes']:
                 time, value = change
                 if(value == '1'):

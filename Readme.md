@@ -115,7 +115,7 @@ python fft_eval.py --fft_channels 4 --in_bitwidths 8 --out_bitwidths 10 --VCD_di
   y{$channel_index}_imag #$channel_index为channel索引，如第一端口:y0_imag，第二端口：y1_imag ...
   ```
 
-- 输出数据高电平有效位命名规范为：**valid**，表示输出结果有效
+- 输出数据高电平有效位命名规范为：**yout_valid**，表示输出结果有效，建议**yout_valid**在数据有效**当前时刻置1**或者**提前一个clk置1**
 
 **不规范的代码将导致脚本无法使用**
 
@@ -129,3 +129,9 @@ python fft_eval.py --fft_channels 4 --in_bitwidths 8 --out_bitwidths 10 --VCD_di
 - 8通道fft电路代码已完成重要勘误：
 
 ​	![image-20241030204621259](./image/image-20241030204621259.png)
+
+---
+
+### 维护记录：
+
+2024.11.6：将代码规范中的valid改为yout_valid，避免子模块存在同名端口导致数据有效时刻抓取错误

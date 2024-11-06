@@ -26,10 +26,8 @@ module fft4 #(
     output wire signed [DATA_WIDTH+1:0] out3_real,
     output wire signed [DATA_WIDTH+1:0] out3_imag,
 
-    output wire yout_valid
+    output wire valid
 );
-    wire valid;
-    assign yout_valid = valid;
     // 1 << 9 = 512 故下面的旋转因子参数也被扩大了512倍
     localparam EXPAND = 9;
     // 四点fft

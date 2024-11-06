@@ -39,8 +39,7 @@ module fft8 (
        output signed [23:0]     y7_real,
        output signed [23:0]     y7_imag
        );
-   assign yout_valid = valid;
-   wire valid;
+   assign yout_valid = yout_valid
    //operating data
    wire signed [23:0]             xm_real [3:0] [7:0];
    wire signed [23:0]             xm_imag [3:0] [7:0];

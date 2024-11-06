@@ -29,7 +29,7 @@ module fft4 #(
     output wire yout_valid
 );
     wire valid;
-    assign yout_valid = valid;
+    assi yout_valid = valid;
     // 1 << 9 = 512 故下面的旋转因子参数也被扩大了512倍
     localparam EXPAND = 9;
     // 四点fft

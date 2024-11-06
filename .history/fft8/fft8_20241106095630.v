@@ -21,7 +21,7 @@ module fft8 (
        input signed [23:0]      x7_real,
        input signed [23:0]      x7_imag,
 
-       output                   yout_valid,
+       output                   valid,
        output signed [23:0]     y0_real,
        output signed [23:0]     y0_imag,
        output signed [23:0]     y1_real,
@@ -39,8 +39,7 @@ module fft8 (
        output signed [23:0]     y7_real,
        output signed [23:0]     y7_imag
        );
-   assign yout_valid = valid;
-   wire valid;
+
    //operating data
    wire signed [23:0]             xm_real [3:0] [7:0];
    wire signed [23:0]             xm_imag [3:0] [7:0];

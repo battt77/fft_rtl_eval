@@ -70,7 +70,7 @@ module test ;
       .x7_real    (x7_real),
       .x7_imag    (x7_imag),
 
-      .yout_valid      (valid),
+      .valid      (valid),
       .y0_real    (y0_real),
       .y0_imag    (y0_imag),
       .y1_real    (y1_real),
